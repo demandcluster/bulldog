@@ -7,12 +7,8 @@ Unofficial Bark API
 # Running
 ```uvicorn main:app --reload```
 
-# Using
+# Docs
 
-http://localhost:8000/text-to-speech
+http://localhost:8000/docs
 
-_POST_
- - prompt
- - speaker
- - temp
 
