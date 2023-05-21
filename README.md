@@ -11,7 +11,7 @@ Unofficial Bark API
 
 http://localhost:8000/text-to-speech
 
-- POST
+_POST_
  - prompt
  - speaker
  - temp
