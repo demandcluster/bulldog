@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bark"
+version = "0.0.2"
+description = "Bulldog API for the Bark text to audio model"
+readme = "README.md"
+requires-python = ">=3.8"
+authors =  [
+    {name = "Suno Inc", email = "hello@suno.ai"},
+    {name = "DemandCluster", email = "ron@demandcluster.com"}
+]
+# Apache 2.0
+license = {file = "LICENSE"}
+
+dependencies = [
+    "anyio",
+    "boto3",
+    "botocore",
+    "certifi",
+    "charset-normalizer",
+    "click",
+    "cmake",
+    "einops",
+    "encodec",
+    "fastapi",
+    "filelock",
+    "fsspec",
+    "funcy",
+    "h11",
+    "huggingface-hub>=0.14.1",
+    "idna",
+    "Jinja2",
+    "jmespath",
+    "joblib",
+    "lit",
+    "MarkupSafe",
+    "mpmath",
+    "networkx",
+    "nltk",
+    "numpy",
+    "packaging",
+    "pika",
+    "pydantic",
+    "pydub",
+    "python-dateutil",
+    "PyYAML",
+    "regex",
+    "requests",
+    "s3transfer",
+    "scipy",
+    "six",
+    "sniffio",
+    "starlette",
+    "sympy",
+    "tokenizers",
+    "torch",
+    "tqdm",
+    "transformers",
+    "triton",
+    "typing_extensions",
+    "urllib3",
+    "uvicorn"
+]
+
+[project.urls]
+source = "https://github.com/demandcluster/bulldog"
+
+[project.optional-dependencies]
+dev = [
+    "bandit",
+    "black",
+    "codecov",
+    "flake8",
+    "hypothesis>=6.14,<7",
+    "isort>=5.0.0,<6",
+    "jupyter",
+    "mypy",
+    "nbconvert",
+    "nbformat",
+    "pydocstyle",
+    "pylint",
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.setuptools]
+packages = ["bark"]
+
+[tool.setuptools.package-data]
+bark = ["assets/prompts/*.npz", "assets/prompts/v2/*.npz"]
+
+
+[tool.black]
+line-length = 100
