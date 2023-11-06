@@ -2,10 +2,10 @@
 Unofficial Bark API
 
 # Installing
-```pip install -r requirements.txt```
+```pip install .```
 
 # Running
-```uvicorn main:app --reload```
+```python -m uvicorn main:app --reload```
 
 # Docs
 
