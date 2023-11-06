@@ -1,0 +1,11 @@
+stages:
+- name: Build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: demandcluster/bulldog:v1
+      pushRemote: true
+      registry: harbor.demandcluster.com
+timeout: 60
+notification: {}
