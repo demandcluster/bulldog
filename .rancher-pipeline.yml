@@ -3,7 +3,7 @@ stages:
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
-      buildContext: .  --cpuset-cpus="0-3"
+      buildContext: .
       tag: demandcluster/bulldog:v1
       pushRemote: true
       registry: harbor.demandcluster.com
