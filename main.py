@@ -22,8 +22,9 @@ import time
 # Create a queue to store the requests
 audio_queue = queue.Queue()
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
 os.environ["SUNO_USE_SMALL_MODELS"] = "1"
+os.environ["SUNO_OFFLOAD_CPU"] = "1"
 nltk.download("punkt")
 
 VERSION = "0.1"
@@ -96,6 +97,11 @@ class Voice(BaseModel):
 @app.get("/")
 def read_root():
     return {"Bulldog": "Woof! 🐶"}
+
+@app.get("/voices")
+def get_voices():
+    return [{"voice_id": "en_speaker_1", "name": "Male English 1", "preview_url":"https://dl.suno-models.io/bark/prompts/prompt_audio/en_speaker_0.mp3"}]
+
 
 
 @app.post("/text-to-speech")

@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bark"
+name = "bulldog"
 version = "0.0.2"
 description = "Bulldog API for the Bark text to audio model"
 readme = "README.md"
